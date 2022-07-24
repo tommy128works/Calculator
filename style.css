@@ -14,7 +14,7 @@
     padding: 1px;
 }
 
-.display {
+#display {
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -26,19 +26,19 @@
     font-size: 3em;
     font-family: monospace;
     color: black;
-    background-color: rgb(153, 0, 255);
+    background-color: rgb(108, 22, 166);
 }
 
 .smallButton {
-    flex: 1 1 0;
+    flex: 1;
 }
 
 .largeButton {
-    flex: 2 1 auto;
+    flex: 2;
 }
 
 .row {
-    flex: 1 1 0;
+    flex: 1;
 }
 
 button {
@@ -49,5 +49,5 @@ button {
     font-size: 2em;
     font-family: monospace;
     color: black;
-    background-color: rgb(255, 230, 0);
+    background-color: rgb(54, 144, 57);
 }

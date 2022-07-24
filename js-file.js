@@ -26,3 +26,20 @@ function operate(a, x, b) {
             return divide(a, b);
     }
 }
+
+let display = '';
+let operator = '';
+
+const displayQuery = document.querySelector('#display');
+function updateDisplay() {
+    displayQuery.textContent = display;
+}
+
+for (let i = 0; i < 10; i++) {
+    let numTemp = document.querySelector('button[value="' +i+ '"]');
+    numTemp.addEventListener('click', () => {
+        display += i;
+        updateDisplay();
+    })
+}
+
