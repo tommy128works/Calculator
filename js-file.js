@@ -15,6 +15,8 @@ function divide(a, b) {
 };
 
 function operate(a, x, b) {
+    a = parseInt(a);
+    b = parseInt(b);
     switch (x) {
         case '+':
             return add(a, b);
@@ -27,8 +29,10 @@ function operate(a, x, b) {
     }
 }
 
-let display = '';
+let display = '0';
 let operator = '';
+let firstNum = 0;
+let startSecondNum = false;
 
 const displayQuery = document.querySelector('#display');
 function updateDisplay() {
@@ -38,8 +42,74 @@ function updateDisplay() {
 for (let i = 0; i < 10; i++) {
     let numTemp = document.querySelector('button[value="' +i+ '"]');
     numTemp.addEventListener('click', () => {
-        display += i;
+        if (display === '0' || (operator != '' && startSecondNum === true)) {
+            display = String(i);
+            startSecondNum = false;
+        }
+        else {
+            display += i;
+        }
         updateDisplay();
     })
 }
+
+const addButton = document.querySelector('button[value="+"]');
+addButton.addEventListener('click', () => {
+    if (operator === '') {
+        operator = '+';
+        firstNum = parseInt(display);
+        startSecondNum = true;
+        console.log('+');
+    }
+})
+
+const subtractButton = document.querySelector('button[value="-"]');
+subtractButton.addEventListener('click', () => {
+    if (operator === '') {
+        operator = '-';
+        firstNum = parseInt(display);
+        startSecondNum = true;
+        console.log('-');
+    }
+})
+
+const multiplyButton = document.querySelector('button[value="*"]');
+multiplyButton.addEventListener('click', () => {
+    if (operator === '') {
+        operator = '*';
+        firstNum = parseInt(display);
+        startSecondNum = true;
+        console.log('*');
+    }
+})
+
+const divideButton = document.querySelector('button[value="/"]');
+divideButton.addEventListener('click', () => {
+    if (operator === '') {
+        operator = '/';
+        firstNum = parseInt(display);
+        startSecondNum = true;
+        console.log('/');
+    }
+})
+
+const equalButton = document.querySelector('button[value="="]');
+equalButton.addEventListener('click', () => {
+    if (firstNum != 0) {
+        display = operate(firstNum, operator, display);
+        firstNum = 0;
+        operator = '';
+        console.log('=');
+    }
+    updateDisplay();
+})
+
+
+const clearButton = document.querySelector('button[value="clear"]');
+clearButton.addEventListener('click', () => {
+    display = '0';
+    firstNum = 0;
+    operator = '';
+    updateDisplay();
+})
 
