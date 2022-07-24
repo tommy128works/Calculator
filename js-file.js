@@ -59,7 +59,6 @@ addButton.addEventListener('click', () => {
         operator = '+';
         firstNum = parseInt(display);
         startSecondNum = true;
-        console.log('+');
     }
 })
 
@@ -69,7 +68,6 @@ subtractButton.addEventListener('click', () => {
         operator = '-';
         firstNum = parseInt(display);
         startSecondNum = true;
-        console.log('-');
     }
 })
 
@@ -79,7 +77,6 @@ multiplyButton.addEventListener('click', () => {
         operator = '*';
         firstNum = parseInt(display);
         startSecondNum = true;
-        console.log('*');
     }
 })
 
@@ -89,9 +86,9 @@ divideButton.addEventListener('click', () => {
         operator = '/';
         firstNum = parseInt(display);
         startSecondNum = true;
-        console.log('/');
     }
 })
+
 
 const equalButton = document.querySelector('button[value="="]');
 equalButton.addEventListener('click', () => {
@@ -99,7 +96,6 @@ equalButton.addEventListener('click', () => {
         display = operate(firstNum, operator, display);
         firstNum = 0;
         operator = '';
-        console.log('=');
     }
     updateDisplay();
 })
