@@ -1,53 +1,53 @@
 .center {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .calculatorContainer {
-    border-style: solid;
-    border-color: black;
-    border-width: 20px;
-    height: 500px;
-    width: 340px;
-    display: flex;
-    flex-direction: column;
-    padding: 1px;
+  border-style: solid;
+  border-color: black;
+  border-width: 20px;
+  height: 500px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
 }
 
 #display {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 1px;
-    border-radius: 5%;
-    border: none;
-    font-weight: initial;
-    font-size: 3em;
-    font-family: monospace;
-    color: black;
-    background-color: rgb(108, 22, 166);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1px;
+  border-radius: 5%;
+  border: none;
+  font-weight: initial;
+  font-size: 3em;
+  font-family: monospace;
+  color: black;
+  background-color: rgb(108, 22, 166);
 }
 
 .smallButton {
-    flex: 1;
+  flex: 1;
 }
 
 .largeButton {
-    flex: 3;
+  flex: 3;
 }
 
 .row {
-    flex: 1;
+  flex: 1;
 }
 
 button {
-    margin: 1px;
-    border-radius: 5%;
-    border: none;
-    font-weight: initial;
-    font-size: 2em;
-    font-family: monospace;
-    color: black;
-    background-color: rgb(54, 144, 57);
+  margin: 1px;
+  border-radius: 5%;
+  border: none;
+  font-weight: initial;
+  font-size: 2em;
+  font-family: monospace;
+  color: black;
+  background-color: rgb(54, 144, 57);
 }
